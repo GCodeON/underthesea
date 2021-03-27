@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700");
+
+body {
+    margin      : 0;
+    // font-family : $font-family;
+}
+
+li {
+    list-style    : none;
+    border-top    : 1px solid #EBEEF5;
+    border-bottom : 1px solid #EBEEF5;
+}
+
+input, textarea {
+    display          : block;
+    color            : #363636;
+    background-color : #F9F9F9;
+    max-width        : 100%;
+    width            : 100%;
+    padding          : .5em;
+    border           : 1px solid #AFAFAF;
+    font-size        : 1.4em;
+    padding          : .5em;
+    border-radius    : 5px;
+}
+
+input {
+    min-height : 20px;
+}
+textarea {
+    min-height : 200px;
+}
+
+a {
+    color           : $grey;
+    text-decoration : none;
+    &:hover, &:focus {
+        color : $color-primary;
+        text-decoration : none;
+    }
+}
+
+i {
+    font-size : 2em;
+}
+
+.layout {
+    width      : 100%;
+    text-align : center;
+}
+
+.auth-container {
+    display : inline-block;
+    width   : 75%;
+    @include  breakpoint(medium) {
+        width : 25%
+    }
+    input {
+        margin     : 1em 0;
+    }
+}
+
+.label {
+    color         : #363636;
+    display       : block;
+    font-size     : 1rem;
+    font-weight   : 700;
+    margin-bottom : 0.5em;
+    text-align    : left;
+}
+
+.button {
+    display          : block;
+    background-color : $color-primary;
+    box-shadow       : inset 0 0.0625em 0.125em rgba(10,10,10,.05);
+    max-width        : 100%;
+    width            : 100%;
+    margin-bottom    : 1em;
+    padding          : 1em;
+    color            : $white;
+    font-size        : 16px;
+    border-radius    : 5px;
+}
+
+.router-link-active {
+    color           : $color-primary;
+    p {
+        text-decoration : none !important;
+    }
+}
+
+.page-title {
+    display     : inline-block;
+    margin      : 0 1em;
+    font-family : Raleway;
+    font-size   : larger;
+    font-weight : 700;
+
+    &:after {
+        content    : '';
+        display    : block;
+        border-top : 2px solid $color-primary;
+        margin     : 0.3em 0;
+    }
+}
+
+.add {
+    background-color : $green;
+}
+.delete {
+    background-color : $red;
+    color            : $white;
+}
+
+.add, .delete {
+    width : 100%;
+}
+
+.back {
+    color: white;
+    background-color: #B7B5B5;
+}
+
+.auth-container {
+    transform : translate(-50%, -50%);
+    left      : 50%;
+    top       : 50%;
+    position  : absolute;
+    display   : block;
+    .logo {
+        width : 75px;
+    }
+}
+
+.button-footer {
+    position         : fixed;
+    background-color : white;
+    bottom           : 85px;
+    width            : 100%;
+    padding          : 0.1em 1em 1em;
+    transform        : translateX(-5vw);
+    @include  breakpoint(small) {
+        bottom    : 85px !important;
+        transform : translateX(-11vw);
+    }
+}
