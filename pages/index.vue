@@ -17,21 +17,27 @@
       </path></g>
     </svg>
     <div class="decor">
-      <br><br><br>
+      <br><br><br>  <br><br><br><br><br><br>   <br>
       <h1 class="title">
         Join Us
       </h1>
       <Logo />
-      <!-- <image class="waves" src="/waves.svg"/> -->
+            <!-- <button class="birthday">
+        Wish Me A Happy Birthday!
+      </button> -->
       <h1 class="title">
-        <span class="name">Sienna Soto-Vazquez</span><br> is turning one!
+        <span class="name">Sienna Soto-Vazquez's</span>
+        <br>First Birthday Celebration!
        <br>
         04/27/21
+        <br><br>
       </h1>
-      <br>
+      <br>   <br><br>
+
       <div class="time">
         <flip-countdown deadline="2021-4-27 00:00:00"></flip-countdown>
       </div>
+      <br> 
     </div>
     <div class="music">
       <audio src="/underthesea.mp3" id="my_audio" ref="song" loop="loop"></audio> 
@@ -103,36 +109,41 @@ export default {
 // }
 #waves {
   width      : 100%;
-  height     : 120%;
+  height     : 160%;
   position   : absolute;
   z-index    : -1;
   background : #526488;
-  @include breakpoint(xxlarge) {
-    height : 125%;
-  }
+  // @include breakpoint(xxlarge) {
+  //   height : 125%;
+  // }
 }
 .decor {
   margin          : 0 auto;
-  height          : 150%;
+  height          : 100%;
   text-align      : center;
-  background      : url('/bg.svg');
+  background      : url('/underthesea.svg');
   background-size : cover;
-  transition      : all 1s;
+  transition      : all 3s;
   cursor: pointer;
 
-    &:hover {
-       transform: scale(1.1);
-    }
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 
-  
+
+    // &:hover {
+    //    transform: scale(1.1);
+    // }
 
 
   @include breakpoint(medium) {
-      width : 100%;
+    background-size: cover;
+    width : 75%;
+    background-position: center;
   }
-  @include breakpoint(large) {
-      width : 50%;
-  }
+  // @include breakpoint(large) {
+  //     width : 50%;
+  // }
   
 
 }
@@ -149,7 +160,7 @@ export default {
   }
 
   .name {
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
 
 }
@@ -169,24 +180,14 @@ export default {
 .flip-card {
   color: white;
 }
-// .flip-card__top, .flip-card__bottom, .flip-clock__slot, .flip-card__back {
-//     color: #fff !important;
-    
-//     // font-family: Sofia !important;
-// }
-// .flip-card__back::before, .flip-card__bottom::after {
-//   color: pink !important;
-//   background: white !important;
-// }
-
-.flip-card__top, .flip-card__back-bottom, .flip-card__back::before, .flip-card__back::after {
+.flip-card__bottom, .flip-card__back-bottom, .flip-card__back::before, .flip-card__back::after {
   color: pink !important;
-  background: white !important;
+  background:  rgb(124, 12, 134)!important;
 }
 
-.flip-card__bottom {
-   color: pink !important;
-     background: white !important;
+.flip-card__top, .flip-card__back::before, .flip-card__back::after  {
+  color: pink !important;
+  background: rgb(72, 7, 78) !important;
 }
  .flip-clock__slot {
     font-family: Sofia !important; 

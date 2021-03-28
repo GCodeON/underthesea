@@ -10,8 +10,8 @@
   max-width: 50%;
   margin: 0 auto;
   transition: all 2s;
-  @include breakpoint(large) {
-    max-width: 45%;
+  @include breakpoint(small) {
+    max-width: 30%;
   }
 
     &:hover {
