@@ -169,11 +169,27 @@ export default {
 .flip-card {
   color: white;
 }
-.flip-card__top, .flip-card__bottom, .flip-clock__slot {
-    color: #fff !important;
-    // font-family: Sofia !important;
+// .flip-card__top, .flip-card__bottom, .flip-clock__slot, .flip-card__back {
+//     color: #fff !important;
+    
+//     // font-family: Sofia !important;
+// }
+// .flip-card__back::before, .flip-card__bottom::after {
+//   color: pink !important;
+//   background: white !important;
+// }
+
+.flip-card__top, .flip-card__back-bottom, .flip-card__back::before, .flip-card__back::after {
+  color: pink !important;
+  background: white !important;
+}
+
+.flip-card__bottom {
+   color: pink !important;
+     background: white !important;
 }
  .flip-clock__slot {
     font-family: Sofia !important; 
+    color: white !important;
  }
 </style>
