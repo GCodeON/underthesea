@@ -17,16 +17,17 @@
       </path></g>
     </svg>
     <div class="decor">
-      <br><br><br>
+      <br><br>
       <h1 class="title">
         Join Us
       </h1>
       <Logo />
       <!-- <image class="waves" src="/waves.svg"/> -->
+<br>
       <h1 class="title">
-        <span class="name">Sienna Soto-Vazquez</span><br> is turning one!
+        Sienna Soto-Vazquez<br> is turning one!
        <br>
-        04/27/21
+       April 27th 2021
       </h1>
       <br>
       <div class="time">
@@ -40,7 +41,7 @@
 </template>
 
 <script>
-import FlipCountdown from 'vue2-flip-countdown';
+
 
 export default {
   props: [],
@@ -66,21 +67,7 @@ export default {
 
   },
   methods: {
-    playMusic() {
-      if(!this.musicPlaying) {
-        this.musicPlaying = true;
-        this.$refs.song.play();
-      }
-
-    },
-    onClick() {
-      console.log("on click play song");
-      this.playMusic();
-    },
-    // onScroll() {
-    //   this.onClick();
-    // }
-
+   
    
   }
 };
@@ -90,90 +77,4 @@ export default {
 
 <style lang="scss">
 
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Sofia&display=swap');
-// .background {
-//   margin          : 0 auto;
-//   min-height      : 100vh;
-//   display         : flex;
-//   justify-content : center;
-//   align-items     : center;
-//   text-align      : center;
-//   background      : url('/waves.svg');
-//   background-size : cover;
-// }
-#waves {
-  width      : 100%;
-  height     : 120%;
-  position   : absolute;
-  z-index    : -1;
-  background : #526488;
-  @include breakpoint(xxlarge) {
-    height : 125%;
-  }
-}
-.decor {
-  margin          : 0 auto;
-  height          : 150%;
-  text-align      : center;
-  background      : url('/bg.svg');
-  background-size : cover;
-  transition      : all 1s;
-  cursor: pointer;
-
-    &:hover {
-       transform: scale(1.1);
-    }
-
-  
-
-
-  @include breakpoint(medium) {
-      width : 100%;
-  }
-  @include breakpoint(large) {
-      width : 50%;
-  }
-  
-
-}
-
-.title {
-  font-family    : 'Sofia', cursive;
-  display        : block;
-  font-weight    : 300;
-  font-size      : 25px;
-  color          : white;
-  letter-spacing : 1px;
-  @include breakpoint(medium) {
-    font-size : 35px;
-  }
-
-  .name {
-    font-size: 1.1em;
-  }
-
-}
-
-.subtitle {
-  font-weight    : 300;
-  font-size      : 42px;
-  color          : #526488;
-  word-spacing   : 5px;
-  padding-bottom : 15px;
-}
-
-.links {
-  padding-top : 15px;
-}
-
-.flip-card {
-  color: white;
-}
-.flip-card__top, .flip-card__bottom, .flip-clock__slot {
-    color: #fff !important;
-    // font-family: Sofia !important;
-}
- .flip-clock__slot {
-    font-family: Sofia !important; 
- }
 </style>

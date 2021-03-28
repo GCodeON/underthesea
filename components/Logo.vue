@@ -9,8 +9,13 @@
 .logo {
   max-width: 50%;
   margin: 0 auto;
+  transition: all 2s;
   @include breakpoint(large) {
-    max-width: 55%;
+    max-width: 45%;
   }
+
+    &:hover {
+       transform: scale(1.2);
+    }
 }
 </style>

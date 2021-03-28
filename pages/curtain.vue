@@ -17,16 +17,17 @@
       </path></g>
     </svg>
     <div class="decor">
-      <br><br><br>
+      <br><br>
       <h1 class="title">
         Join Us
       </h1>
       <Logo />
       <!-- <image class="waves" src="/waves.svg"/> -->
+<br>
       <h1 class="title">
-        <span class="name">Sienna Soto-Vazquez</span><br> is turning one!
+        Sienna Soto-Vazquez<br> is turning one!
        <br>
-        04/27/21
+       April 27th 2021
       </h1>
       <br>
       <div class="time">
@@ -89,8 +90,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Sofia&display=swap');
 // .background {
 //   margin          : 0 auto;
 //   min-height      : 100vh;
@@ -108,7 +107,7 @@ export default {
   z-index    : -1;
   background : #526488;
   @include breakpoint(xxlarge) {
-    height : 125%;
+    height: 125%;
   }
 }
 .decor {
@@ -116,40 +115,36 @@ export default {
   height          : 150%;
   text-align      : center;
   background      : url('/bg.svg');
-  background-size : cover;
-  transition      : all 1s;
-  cursor: pointer;
+  background-size : contain;
+  transition      : all 2s;
 
     &:hover {
        transform: scale(1.1);
     }
 
-  
-
 
   @include breakpoint(medium) {
-      width : 100%;
+      background-size : contain;
+      width           : 100%;
   }
   @include breakpoint(large) {
-      width : 50%;
+      background-size : cover;
+      width           : 50%;
   }
-  
 
 }
 
 .title {
-  font-family    : 'Sofia', cursive;
+  // font-family    : 'Quicksand', Roboto, 'Helvetica Neue', Arial;
+  font-family: fantasy;
   display        : block;
   font-weight    : 300;
-  font-size      : 25px;
+  font-size      : 20px;
   color          : white;
   letter-spacing : 1px;
+  // margin: 2em auto;
   @include breakpoint(medium) {
-    font-size : 35px;
-  }
-
-  .name {
-    font-size: 1.1em;
+    font-size      : 30px;
   }
 
 }
@@ -169,11 +164,15 @@ export default {
 .flip-card {
   color: white;
 }
-.flip-card__top, .flip-card__bottom, .flip-clock__slot {
+.flip-card__top {
     color: #fff !important;
-    // font-family: Sofia !important;
+    // background: #fff !important;
 }
- .flip-clock__slot {
-    font-family: Sofia !important; 
- }
+.flip-card__bottom {
+    color: #fff !important;
+    // background: rgb(201, 201, 201) !important;
+}
+.flip-clock__slot {
+  color: white !important;
+}
 </style>
