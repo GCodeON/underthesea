@@ -27,8 +27,8 @@
         Wish Me A Happy Birthday!
       </button> -->
       <h1 class="title">
-        <span class="name">Sienna Soto-Vazquez's</span>
-        <br>First Birthday Celebration!
+        <span class="name">Sienna Soto-Vazquez</span>
+        <br>is turning one!
        <br>
         04/27/21
         <br><br>
