@@ -71,7 +71,7 @@ export default {
     return {
       musicPlaying: false,
       btnOps: {
-        style: "fill",
+        style: "stroke",
         direction: "bottom",
         duration: 1200,
         easing: "easeOutSine",
@@ -129,11 +129,13 @@ export default {
   will-change   : transform;
   font-family   : 'Sofia';
   font-size     : 30px;
+transition: background-color 0.5s ease; 
 
   &:hover {
-    background : #f8c5c3;
-    color      : #fff;
+    background : #f8c5c3c5;
+    color      : #48084e;
     border     : 4px solid #fff;
+    transition: color 0.5s ease;
 
   }
 }
