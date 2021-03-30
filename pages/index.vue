@@ -18,27 +18,37 @@
       </path></g>
     </svg>
     <div class="decor">
-      <br><br><br>  <br><br><br><br><br><br>   <br>
+      <br><br><br>  <br><br><br><br><br><br><br>
       <h1 class="title">
         Join Us
       </h1>
       <Logo />
-            <!-- <button class="birthday">
-        Wish Me A Happy Birthday!
-      </button> -->
       <h1 class="title">
         <span class="name">Sienna Soto-Vazquez</span>
-        <br>is turning one!
-       <br>
-        04/27/21
-        <br><br>
+        <br>
+        is turning one!
+        <br>
       </h1>
-      <br>   <br><br>
 
+      <h1 class="title">04/27/21</h1>
+      <br>
+      <particle-effect-button
+      :visible.sync="btnOps.visible"
+      :animating.sync="btnOps.animating"
+      :options="btnOps"
+      cls="btn-cls"
+      >
+        Happy Birthday!
+      </particle-effect-button>
+
+      <!-- <br v-if="btnOps.visible"><br v-if="btnOps.visible"><br v-if="btnOps.visible"> -->
+      <br><br><br> 
       <div class="time">
         <flip-countdown deadline="2021-4-27 00:00:00"></flip-countdown>
       </div>
-      <br> 
+
+      <br><br><br> 
+
     </div>
     <div class="music">
       <audio src="/underthesea.mp3" id="my_audio" ref="song" loop="loop"></audio> 
@@ -49,27 +59,39 @@
 
 <script>
 import FlipCountdown from 'vue2-flip-countdown';
+import ParticleEffectButton from "vue-particle-effect-buttons"
 
 export default {
   props: [],
   components: {
-    FlipCountdown
+    FlipCountdown, ParticleEffectButton
   },
   data() {
     return {
       musicPlaying: false,
+      btnOps: {
+        style: "fill",
+        direction: "bottom",
+        duration: 1200,
+        easing: "easeOutSine",
+        speed: 0.7,
+        oscillationCoefficient: 5,
+        label: "Register",
+        onComplete: () => {
+          console.log("complete");
+
+        },
+        onBegin: () => {
+          console.log("begin");
+        },
+        visible: true,
+        animating: false
+      },
     }
   },
   mounted() {
-
    
   },
-//  created () {
-//     window.addEventListener('scroll', this.onScroll);
-//   },
-//   destroyed () {
-//     window.removeEventListener('scroll', this.onScroll);
-//   },
   computed: {
 
   },
@@ -84,12 +106,7 @@ export default {
     onClick() {
       console.log("on click play song");
       this.playMusic();
-    },
-    // onScroll() {
-    //   this.onClick();
-    // }
-
-   
+    },   
   }
 };
 
@@ -98,8 +115,28 @@ export default {
 
 <style lang="scss">
 
+.vue-particle-effect-button .particles-button {
+  cursor:  url('/mermaid.svg') 25 50, auto;
+  position      : relative;
+  border-radius : 15px;
+  background    : transparent;
+  color         : #fff;
+  border        : 4px solid #f8c5c3;
+  margin        : 0;
+  will-change   : transform;
+  font-family   : 'Sofia';
+  font-size     : 30px;
+
+  &:hover {
+    background : #f8c5c3;
+    color      : #fff;
+    border     : 4px solid #fff;
+
+  }
+}
+
 .card {
-  cursor:  url('/mermaid.svg'), auto;
+  cursor:  url('/mermaid.svg') 25 50, auto;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Sofia&display=swap');
@@ -117,25 +154,12 @@ export default {
   75%  {transform: scale(1.03)}
   50%  {transform: scale(1)}
 }
-// .background {
-//   margin          : 0 auto;
-//   min-height      : 100vh;
-//   display         : flex;
-//   justify-content : center;
-//   align-items     : center;
-//   text-align      : center;
-//   background      : url('/waves.svg');
-//   background-size : cover;
-// }
 #waves {
   width      : 100%;
   height     : 160%;
   position   : absolute;
   z-index    : -1;
   background : #526488;
-  // @include breakpoint(xxlarge) {
-  //   height : 125%;
-  // }
 }
 .decor {
   margin              : 0 auto;
@@ -146,11 +170,7 @@ export default {
   background-size     : cover;
   transition          : all 3s;
   background-position : center;
-  // cursor              : pointer;
   animation           : oscillate 8s linear infinite;
-
-
-
 
   @include breakpoint(medium) {
     background-repeat : no-repeat;
@@ -176,17 +196,16 @@ export default {
   }
 
 }
-
 .logo {
-  max-width: 50%;
-  margin: 0 auto;
-  transition: all 2s;
+  max-width  : 50%;
+  margin     : 0 auto;
+  transition : all 2s;
   &:hover {
       transform: scale(1.2);
   }
   //  animation: oscillate 5s linear 2s infinite forwards;
   @include breakpoint(small) {
-    max-width: 30%;
+    max-width : 30%;
   }
 }
 
@@ -203,20 +222,21 @@ export default {
 }
 
 .flip-card {
-  color: white;
+  color : white;
 }
 .flip-card__bottom, .flip-card__back-bottom, .flip-card__back::before, .flip-card__back::after {
-  color: pink !important;
-  background:  rgb(124, 12, 134)!important;
+  color      : pink !important;
+  background : rgb(124, 12, 134)!important;
 }
 
 .flip-card__top, .flip-card__back::before, .flip-card__back::after  {
-  color: pink !important;
-  background: rgb(72, 7, 78) !important;
+  color      : pink !important;
+  background : rgb(72, 7, 78) !important;
 }
  .flip-clock__slot {
-    font-family: Sofia !important; 
-    color: white !important;
+    font-family : Sofia !important;
+    background  : #f5c1b69e !important;
+    color       : black !important;
  }
 
 </style>
