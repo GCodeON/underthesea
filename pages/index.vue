@@ -17,6 +17,7 @@
         <animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.3333333333333333;0.6666666666666666;1" calcmod="spline" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9" begin="-4s" values="M 1179 333 C 1179 489 907 648 758 696 C 609 744 342 742 250 616 C 158 490 112 141 204 15 C 296 -111 622 -115 770 -67 C 918 -19 1179 177 1179 333;M 1195 333 C 1195 496 937 719 782 769 C 627 819 257 813 161 681 C 65 549 73 122 169 -10 C 265 -142 600 -72 755 -22 C 910 28 1195 170 1195 333;M 1244 333 C 1244 518 974 760 798 817 C 622 874 222 865 113 715 C 4 565 -10 88 99 -61 C 208 -210 601 -145 777 -88 C 953 -31 1244 148 1244 333;M 1179 333 C 1179 489 907 648 758 696 C 609 744 342 742 250 616 C 158 490 112 141 204 15 C 296 -111 622 -115 770 -67 C 918 -19 1179 177 1179 333"></animate>
       </path></g>
     </svg>
+    
     <div class="decor">
       <br><br><br>  <br><br><br><br><br><br><br>
       <h1 class="title">
@@ -59,7 +60,7 @@
 
 <script>
 import FlipCountdown from 'vue2-flip-countdown';
-import ParticleEffectButton from "vue-particle-effect-buttons"
+import ParticleEffectButton from "vue-particle-effect-buttons";
 
 export default {
   props: [],
@@ -79,6 +80,8 @@ export default {
         label: "Register",
         onComplete: () => {
           console.log("complete");
+
+          window.open('https://www.myregistry.com/wishlist/sienna-aurora-soto-vazquez-escondido-ca/2790830')
 
         },
         onBegin: () => {
