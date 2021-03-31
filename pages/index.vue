@@ -190,7 +190,7 @@ export default {
     @include breakpoint(large) {
     background-repeat : no-repeat;
     background-size   : cover;
-    width             : 87%;
+    width             : 85%;
     
   }
 
