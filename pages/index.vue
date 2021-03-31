@@ -28,11 +28,11 @@
         <span class="name">Sienna Soto-Vazquez</span>
         <br>
         is turning one!
-        <br>
+
       </h1>
 
       <h1 class="title">04/27/21</h1>
-      <br>
+  <br>
       <particle-effect-button
       :visible.sync="btnOps.visible"
       :animating.sync="btnOps.animating"
@@ -73,10 +73,10 @@ export default {
       btnOps: {
         style: "stroke",
         direction: "bottom",
-        duration: 1200,
+        duration: 1000,
         easing: "easeOutSine",
         speed: 0.7,
-        oscillationCoefficient: 5,
+        oscillationCoefficient: 75,
         label: "Register",
         onComplete: () => {
           console.log("complete");
@@ -122,21 +122,25 @@ export default {
   cursor:  url('/mermaid.svg') 25 50, auto;
   position      : relative;
   border-radius : 15px;
-  background    : transparent;
-  color         : #fff;
-  border        : 4px solid #f8c5c3;
-  margin        : 0;
-  will-change   : transform;
-  font-family   : 'Sofia';
-  font-size     : 30px;
-transition: background-color 0.5s ease; 
+  background  : rgba(255, 255, 255, 0.257);
+  color       : white;
+  border      : 4px solid white;
+  margin      : 0;
+  will-change : transform;
+  font-family : 'Sofia';
+  transition  : background-color 0.5s ease;
+      font-size   : 22px;
 
   &:hover {
-    background : #f8c5c3c5;
-    color      : #48084e;
-    border     : 4px solid #fff;
-    transition: color 0.5s ease;
+    background : rgb(124, 12, 134);
+    color      : #fff;
+    border     : 4px solid #f8c5c3;
+    transition : color 0.5s ease;
+    transition : background-color 0.5s ease;
 
+  }
+  @include breakpoint(medium) {
+    font-size   : 27px;
   }
 }
 
@@ -181,6 +185,13 @@ transition: background-color 0.5s ease;
     background-repeat : no-repeat;
     background-size   : cover;
     width             : 75%;
+    
+  }
+    @include breakpoint(large) {
+    background-repeat : no-repeat;
+    background-size   : cover;
+    width             : 87%;
+    
   }
 
 }
