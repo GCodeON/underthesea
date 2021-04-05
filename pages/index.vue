@@ -39,7 +39,16 @@
       :options="btnOps"
       cls="btn-cls"
       >
-        Happy Birthday!
+      Zoom Party! 
+      </particle-effect-button>
+
+      <particle-effect-button
+      :visible.sync="registryOps.visible"
+      :animating.sync="registryOps.animating"
+      :options="registryOps"
+      cls="btn-cls"
+      >
+        View Registry!
       </particle-effect-button>
 
       <!-- <br v-if="btnOps.visible"><br v-if="btnOps.visible"><br v-if="btnOps.visible"> -->
@@ -71,6 +80,26 @@ export default {
     return {
       musicPlaying: false,
       btnOps: {
+        style: "stroke",
+        direction: "bottom",
+        duration: 1000,
+        easing: "easeOutSine",
+        speed: 0.7,
+        oscillationCoefficient: 75,
+        label: "Register",
+        onComplete: () => {
+          console.log("complete");
+
+          window.open('https://calendar.google.com/event?action=TEMPLATE&tmeid=Y2p0Z3JpMGd2cDBqMjRkcjlqM2ZxYzk2dWcgZ2VyYXJkb3NvdG85M0Bt&tmsrc=gerardosoto93%40gmail.com');
+
+        },
+        onBegin: () => {
+          console.log("begin");
+        },
+        visible: true,
+        animating: false
+      },
+      registryOps: {
         style: "stroke",
         direction: "bottom",
         duration: 1000,
@@ -122,7 +151,7 @@ export default {
   cursor:  url('/mermaid.svg') 25 50, auto;
   position      : relative;
   border-radius : 15px;
-  background  : rgba(255, 255, 255, 0.257);
+    background : rgb(124, 12, 134);
   color       : white;
   border      : 4px solid white;
   margin      : 0;
