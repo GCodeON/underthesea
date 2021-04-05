@@ -151,14 +151,15 @@ export default {
   cursor:  url('/mermaid.svg') 25 50, auto;
   position      : relative;
   border-radius : 15px;
-    background : rgb(124, 12, 134);
-  color       : white;
-  border      : 4px solid white;
-  margin      : 0;
-  will-change : transform;
-  font-family : 'Sofia';
-  transition  : background-color 0.5s ease;
-      font-size   : 22px;
+  background    : rgb(124, 12, 134);
+  color         : white;
+  border        : 4px solid white;
+  margin        : 0;
+  will-change   : transform;
+  font-family   : 'Sofia';
+  transition    : background-color 0.5s ease;
+  font-size     : 22px;
+  min-width: 250px;
 
   &:hover {
     background : rgb(124, 12, 134);
@@ -194,7 +195,7 @@ export default {
 }
 #waves {
   width      : 100%;
-  height     : 160%;
+  height     : 169%;
   position   : absolute;
   z-index    : -1;
   background : #526488;
