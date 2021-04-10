@@ -90,7 +90,7 @@ export default {
         onComplete: () => {
           console.log("complete");
 
-          window.open('https://calendar.google.com/event?action=TEMPLATE&tmeid=Y2p0Z3JpMGd2cDBqMjRkcjlqM2ZxYzk2dWcgZ2VyYXJkb3NvdG85M0Bt&tmsrc=gerardosoto93%40gmail.com');
+          window.open('https://calendar.google.com/event?action=TEMPLATE&tmeid=NGNyZnYwcTNyb3RrYmljaDFsNTYzdDk3dHAgZ2VyYXJkb3NvdG85M0Bt&tmsrc=gerardosoto93%40gmail.com');
 
         },
         onBegin: () => {
