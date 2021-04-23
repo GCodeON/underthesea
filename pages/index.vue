@@ -39,7 +39,7 @@
       :options="btnOps"
       cls="btn-cls"
       >
-      Zoom Party! 
+      Join Zoom Party! 
       </particle-effect-button>
 
       <particle-effect-button
@@ -90,7 +90,7 @@ export default {
         onComplete: () => {
           console.log("complete");
 
-          window.open('https://calendar.google.com/event?action=TEMPLATE&tmeid=NGNyZnYwcTNyb3RrYmljaDFsNTYzdDk3dHAgZ2VyYXJkb3NvdG85M0Bt&tmsrc=gerardosoto93%40gmail.com');
+          window.open('https://calendar.google.com/event?action=TEMPLATE&tmeid=cGswdHF0ZHFncW5kcWdudGIwaHZiYzAzMjAgZ2VyYXJkb3NvdG85M0Bt&tmsrc=gerardosoto93%40gmail.com');
 
         },
         onBegin: () => {
